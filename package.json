@@ -9,8 +9,10 @@
   "author": "pradeepb",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.12.2",
     "express": "^4.12.3",
-    "express3-handlebars": "^0.5.2"
+    "express3-handlebars": "^0.5.2",
+    "formidable": "^1.0.17"
   },
   "devDependencies": {
     "chai": "^2.2.0",
