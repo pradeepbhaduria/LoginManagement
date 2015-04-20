@@ -17,6 +17,13 @@
 <body>
     <header><img src="/img/logo.jpg" alt="Meadowlark Travel Logo">
     </header>
+
+    {{#if flash}}
+    <div class="alert alert-dismissible alert-{{flash.type}}">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <strong>{{flash.intro}}</strong> {{{flash.message}}}
+    </div>
+    {{/if}}
     {{{body}}}
 
     <!-- ============================ test framework code ============================ */ -->
@@ -30,7 +37,6 @@
 
     <script>
         mocha.ui('tdd');
-
         var assert = chai.assert;
     </script>
 
@@ -45,9 +51,7 @@
         mocha.run();
     </script>
 
-    {{/if}}
-    
-    {{{_sections.jquery}}}
+    {{/if}} {{{_sections.jquery}}}
 
 </body>
 
