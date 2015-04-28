@@ -38,12 +38,16 @@ app.use(require('express-session')({
     resave: true
 }));
 
+
+
 app.use(express.static(__dirname + '/public'));
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
+app.use('/api', require('cors')());
 
 // database configuration
 var mongoose = require('mongoose');
@@ -106,16 +110,87 @@ app.get('/epic-fail', function (req, res) {
     });
 });
 
+// api
+var Attraction = require('./models/attractions.js');
+var rest = require('connect-rest');
+
+// API configuration
+var apiOptions = {
+    context: '/api',
+    domain: require('domain').create(),
+};
+// link API into pipeline
+app.use(rest.rester(apiOptions));
+
+rest.get('/attractions', function (req, content, cb) {
+    console.log("Attractions requested");
+    Attraction.find({
+        approved: true
+    }, function (err, attractions) {
+        if (err) return cb({
+            error: 'Internal error.'
+        });
+        cb(null, attractions.map(function (a) {
+            return {
+                name: a.name,
+                description: a.description,
+                location: a.location,
+            };
+        }));
+    });
+});
+
+rest.post('/attraction', function (req, content, cb) {
+    console.log("console.log");
+    var a = new Attraction({
+        name: req.body.name,
+        description: req.body.description,
+        location: {
+            lat: req.body.lat,
+            lng: req.body.lng
+        },
+        history: {
+            event: 'created',
+            email: req.body.email,
+            date: new Date(),
+        },
+        approved: false,
+    });
+    a.save(function (err, a) {
+        if (err) return cb({
+            error: 'Unable to add attraction.'
+        });
+        cb(null, {
+            id: a._id
+        });
+    });
+});
+
+rest.get('/attraction/:id', function (req, content, cb) {
+    Attraction.findById(req.params.id, function (err, a) {
+        if (err) return cb({
+            error: 'Unable to retrieve attraction.'
+        });
+        cb(null, {
+            name: a.name,
+            description: a.description,
+            location: a.location,
+        });
+    });
+});
+
+
+
 // add support for auto views
 var autoViews = {};
 
-app.use(function(req,res,next){
-    var path = req.path.toLowerCase();  
+app.use(function (req, res, next) {
+    var path = req.path.toLowerCase();
     // check cache; if it's there, render the view
-    if(autoViews[path]) return res.render(autoViews[path]);
+    if (autoViews[path]) return res.render(autoViews[path]);
     // if it's not in the cache, see if there's
     // a .handlebars file that matches
-    if(fs.existsSync(__dirname + '/views' + path + '.handlebars')){
+    if (fs.existsSync(__dirname + '/views' + path + '.handlebars')) {
         autoViews[path] = path.replace(/^\//, '');
         return res.render(autoViews[path]);
     }

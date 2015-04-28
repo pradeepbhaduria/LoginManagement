@@ -3,6 +3,7 @@
 
 
 var Vacation = require('../models/vacation.js'),
+    Attraction = require('../models/attractions.js'),
     VacationInSeasonListener = require('../models/vacationInSeasonListener.js');
 
 function convertFromUSD(value, currency) {

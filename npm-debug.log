@@ -1,254 +1,181 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'mocha' ]
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'passport',
+1 verbose cli   'pasport-facebook' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.36
-4 verbose cache add [ 'mocha', null ]
-5 verbose cache add name=undefined spec="mocha" args=["mocha",null]
-6 verbose parsed url { protocol: null,
-6 verbose parsed url   slashes: null,
-6 verbose parsed url   auth: null,
-6 verbose parsed url   host: null,
-6 verbose parsed url   port: null,
-6 verbose parsed url   hostname: null,
-6 verbose parsed url   hash: null,
-6 verbose parsed url   search: null,
-6 verbose parsed url   query: null,
-6 verbose parsed url   pathname: 'mocha',
-6 verbose parsed url   path: 'mocha',
-6 verbose parsed url   href: 'mocha' }
-7 silly lockFile a619da43-mocha mocha
-8 verbose lock mocha /Users/prbhadur/.npm/a619da43-mocha.lock
-9 silly lockFile a619da43-mocha mocha
-10 silly lockFile a619da43-mocha mocha
-11 verbose addNamed [ 'mocha', '' ]
-12 verbose addNamed [ null, '*' ]
-13 silly lockFile b9899f31-mocha mocha@
-14 verbose lock mocha@ /Users/prbhadur/.npm/b9899f31-mocha.lock
-15 silly addNameRange { name: 'mocha', range: '*', hasData: false }
-16 verbose request where is /mocha
-17 verbose request registry https://registry.npmjs.org/
-18 verbose request id d02e0af2f45af2d8
-19 verbose url raw /mocha
-20 verbose url resolving [ 'https://registry.npmjs.org/', './mocha' ]
-21 verbose url resolved https://registry.npmjs.org/mocha
-22 verbose request where is https://registry.npmjs.org/mocha
-23 info trying registry request attempt 1 at 21:10:04
-24 verbose etag "234KS7VNKS3IX2XAG9OI6CY36"
-25 http GET https://registry.npmjs.org/mocha
-26 http 200 https://registry.npmjs.org/mocha
-27 silly registry.get cb [ 200,
-27 silly registry.get   { date: 'Thu, 09 Apr 2015 15:40:05 GMT',
-27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-27 silly registry.get     etag: '"8BPH9NK0DCD4T2FQ5H3FKN4GZ"',
-27 silly registry.get     'content-type': 'application/json',
-27 silly registry.get     'cache-control': 'max-age=60',
-27 silly registry.get     'content-length': '110349',
-27 silly registry.get     'accept-ranges': 'bytes',
-27 silly registry.get     via: '1.1 varnish',
-27 silly registry.get     age: '0',
-27 silly registry.get     'x-served-by': 'cache-fra1227-FRA',
-27 silly registry.get     'x-cache': 'HIT',
-27 silly registry.get     'x-cache-hits': '1',
-27 silly registry.get     'x-timer': 'S1428594005.311638,VS0,VE51',
-27 silly registry.get     vary: 'Accept',
-27 silly registry.get     'keep-alive': 'timeout=10, max=50',
-27 silly registry.get     connection: 'Keep-Alive' } ]
-28 silly addNameRange number 2 { name: 'mocha', range: '*', hasData: true }
-29 silly addNameRange versions [ 'mocha',
-29 silly addNameRange   [ '0.0.1-alpha1',
-29 silly addNameRange     '0.0.1-alpha2',
-29 silly addNameRange     '0.0.1-alpha3',
-29 silly addNameRange     '0.0.1-alpha4',
-29 silly addNameRange     '0.0.1-alpha5',
-29 silly addNameRange     '0.0.1-alpha6',
-29 silly addNameRange     '0.0.1',
-29 silly addNameRange     '0.0.2',
-29 silly addNameRange     '0.0.3',
-29 silly addNameRange     '0.0.4',
-29 silly addNameRange     '0.0.5',
-29 silly addNameRange     '0.0.6',
-29 silly addNameRange     '0.0.7',
-29 silly addNameRange     '0.0.8',
-29 silly addNameRange     '0.1.0',
-29 silly addNameRange     '0.2.0',
-29 silly addNameRange     '0.3.0',
-29 silly addNameRange     '0.3.1',
-29 silly addNameRange     '0.3.2',
-29 silly addNameRange     '0.3.3',
-29 silly addNameRange     '0.3.4',
-29 silly addNameRange     '0.3.6',
-29 silly addNameRange     '0.4.0',
-29 silly addNameRange     '0.5.0',
-29 silly addNameRange     '0.6.0',
-29 silly addNameRange     '0.7.0',
-29 silly addNameRange     '0.7.1',
-29 silly addNameRange     '0.8.0',
-29 silly addNameRange     '0.8.1',
-29 silly addNameRange     '0.9.0',
-29 silly addNameRange     '0.10.0',
-29 silly addNameRange     '0.10.1',
-29 silly addNameRange     '0.10.2',
-29 silly addNameRange     '0.11.0',
-29 silly addNameRange     '0.12.0',
-29 silly addNameRange     '0.12.1',
-29 silly addNameRange     '0.13.0',
-29 silly addNameRange     '0.14.0',
-29 silly addNameRange     '0.14.1',
-29 silly addNameRange     '1.0.0',
-29 silly addNameRange     '1.0.1',
-29 silly addNameRange     '1.0.2',
-29 silly addNameRange     '1.0.3',
-29 silly addNameRange     '1.1.0',
-29 silly addNameRange     '1.2.0',
-29 silly addNameRange     '1.2.1',
-29 silly addNameRange     '1.2.2',
-29 silly addNameRange     '1.3.0',
-29 silly addNameRange     '1.3.1',
-29 silly addNameRange     '1.3.2',
-29 silly addNameRange     '1.4.0',
-29 silly addNameRange     '1.4.1',
-29 silly addNameRange     '1.4.2',
-29 silly addNameRange     '1.4.3',
-29 silly addNameRange     '1.5.0',
-29 silly addNameRange     '1.6.0',
-29 silly addNameRange     '1.7.0',
-29 silly addNameRange     '1.7.1',
-29 silly addNameRange     '1.7.2',
-29 silly addNameRange     '1.7.3',
-29 silly addNameRange     '1.7.4',
-29 silly addNameRange     '1.8.0',
-29 silly addNameRange     '1.8.1',
-29 silly addNameRange     '1.8.2',
-29 silly addNameRange     '1.9.0',
-29 silly addNameRange     '1.10.0',
-29 silly addNameRange     '1.11.0',
-29 silly addNameRange     '1.12.0',
-29 silly addNameRange     '1.12.1',
-29 silly addNameRange     '1.13.0',
-29 silly addNameRange     '1.14.0',
-29 silly addNameRange     '1.15.0',
-29 silly addNameRange     '1.15.1',
-29 silly addNameRange     '1.16.0',
-29 silly addNameRange     '1.16.1',
-29 silly addNameRange     '1.16.2',
-29 silly addNameRange     '1.17.0',
-29 silly addNameRange     '1.17.1',
-29 silly addNameRange     '1.18.0',
-29 silly addNameRange     '1.18.1',
-29 silly addNameRange     '1.18.2',
-29 silly addNameRange     '1.19.0',
-29 silly addNameRange     '1.20.0',
-29 silly addNameRange     '1.20.1',
-29 silly addNameRange     '1.21.0',
-29 silly addNameRange     '1.21.1',
-29 silly addNameRange     '1.21.2',
-29 silly addNameRange     '1.21.3',
-29 silly addNameRange     '1.21.4',
-29 silly addNameRange     '1.21.5',
-29 silly addNameRange     '2.0.0',
-29 silly addNameRange     '2.0.1',
-29 silly addNameRange     '2.1.0',
-29 silly addNameRange     '2.2.0',
-29 silly addNameRange     '2.2.1',
-29 silly addNameRange     '2.2.3',
-29 silly addNameRange     '2.2.4' ] ]
-30 verbose addNamed [ 'mocha', '2.2.4' ]
-31 verbose addNamed [ '2.2.4', '2.2.4' ]
-32 silly lockFile 8d691304-mocha-2-2-4 mocha@2.2.4
-33 verbose lock mocha@2.2.4 /Users/prbhadur/.npm/8d691304-mocha-2-2-4.lock
-34 silly lockFile 8d691304-mocha-2-2-4 mocha@2.2.4
-35 silly lockFile 8d691304-mocha-2-2-4 mocha@2.2.4
-36 silly lockFile b9899f31-mocha mocha@
-37 silly lockFile b9899f31-mocha mocha@
-38 silly resolved [ { name: 'mocha',
-38 silly resolved     version: '2.2.4',
-38 silly resolved     description: 'simple, flexible, fun test framework',
-38 silly resolved     keywords: [ 'mocha', 'test', 'bdd', 'tdd', 'tap' ],
-38 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
-38 silly resolved     contributors:
-38 silly resolved      [ [Object],
-38 silly resolved        [Object],
-38 silly resolved        [Object],
-38 silly resolved        [Object],
-38 silly resolved        [Object],
-38 silly resolved        [Object],
-38 silly resolved        [Object],
-38 silly resolved        [Object] ],
-38 silly resolved     repository: { type: 'git', url: 'git://github.com/mochajs/mocha.git' },
-38 silly resolved     maintainers: [ [Object], [Object], [Object] ],
-38 silly resolved     main: './index',
-38 silly resolved     browser: './mocha.js',
-38 silly resolved     bin: { mocha: './bin/mocha', _mocha: './bin/_mocha' },
-38 silly resolved     engines: { node: '>= 0.8.x' },
-38 silly resolved     scripts: { test: 'make test-all' },
-38 silly resolved     dependencies:
-38 silly resolved      { commander: '2.3.0',
-38 silly resolved        debug: '2.0.0',
-38 silly resolved        diff: '1.0.8',
-38 silly resolved        'escape-string-regexp': '1.0.2',
-38 silly resolved        glob: '3.2.3',
-38 silly resolved        growl: '1.8.1',
-38 silly resolved        jade: '0.26.3',
-38 silly resolved        mkdirp: '0.5.0',
-38 silly resolved        'supports-color': '~1.2.0' },
-38 silly resolved     devDependencies: { 'coffee-script': '~1.8.0', should: '~4.0.0' },
-38 silly resolved     files:
-38 silly resolved      [ 'bin',
-38 silly resolved        'images',
-38 silly resolved        'lib',
-38 silly resolved        'index.js',
-38 silly resolved        'mocha.css',
-38 silly resolved        'mocha.js',
-38 silly resolved        'LICENSE' ],
-38 silly resolved     licenses: [ [Object] ],
-38 silly resolved     bugs: { url: 'https://github.com/mochajs/mocha/issues' },
-38 silly resolved     homepage: 'https://github.com/mochajs/mocha',
-38 silly resolved     _id: 'mocha@2.2.4',
-38 silly resolved     _shasum: '192b0edc0e17e56613bc66e5fc7e81c00413a98d',
-38 silly resolved     _from: 'mocha@',
-38 silly resolved     _npmVersion: '1.4.9',
-38 silly resolved     _npmUser: { name: 'travisjeffery', email: 'tj@travisjeffery.com' },
-38 silly resolved     dist:
-38 silly resolved      { shasum: '192b0edc0e17e56613bc66e5fc7e81c00413a98d',
-38 silly resolved        tarball: 'http://registry.npmjs.org/mocha/-/mocha-2.2.4.tgz' },
-38 silly resolved     directories: {},
-38 silly resolved     _resolved: 'https://registry.npmjs.org/mocha/-/mocha-2.2.4.tgz',
-38 silly resolved     readme: 'ERROR: No README data found!' } ]
-39 info install mocha@2.2.4 into /usr/local/lib
-40 info installOne mocha@2.2.4
-41 verbose lib/node_modules/mocha unbuild
-42 verbose tar unpack /Users/prbhadur/.npm/mocha/2.2.4/package.tgz
-43 silly lockFile 746f3f6f-usr-local-lib-node-modules-mocha tar:///usr/local/lib/node_modules/mocha
-44 verbose lock tar:///usr/local/lib/node_modules/mocha /Users/prbhadur/.npm/746f3f6f-usr-local-lib-node-modules-mocha.lock
-45 silly lockFile 34d2ec2c-adur-npm-mocha-2-2-4-package-tgz tar:///Users/prbhadur/.npm/mocha/2.2.4/package.tgz
-46 verbose lock tar:///Users/prbhadur/.npm/mocha/2.2.4/package.tgz /Users/prbhadur/.npm/34d2ec2c-adur-npm-mocha-2-2-4-package-tgz.lock
-47 silly gunzTarPerm modes [ '755', '644' ]
-48 error Error: EACCES, mkdir '/usr/local/lib/node_modules/mocha'
-48 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/mocha']
-48 error   errno: 3,
-48 error   code: 'EACCES',
-48 error   path: '/usr/local/lib/node_modules/mocha',
-48 error   fstream_type: 'Directory',
-48 error   fstream_path: '/usr/local/lib/node_modules/mocha',
-48 error   fstream_class: 'DirWriter',
-48 error   fstream_stack:
-48 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
-48 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
-48 error      'Object.oncomplete (fs.js:108:15)' ] }
-49 error Please try running this command again as root/Administrator.
-50 error System Darwin 14.3.0
-51 error command "node" "/usr/local/bin/npm" "install" "-g" "mocha"
-52 error cwd /Users/prbhadur/Documents/Node&Express/meadowlark
-53 error node -v v0.10.36
-54 error npm -v 1.4.28
-55 error path /usr/local/lib/node_modules/mocha
-56 error fstream_path /usr/local/lib/node_modules/mocha
-57 error fstream_type Directory
-58 error fstream_class DirWriter
-59 error code EACCES
-60 error errno 3
-61 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/mocha'
-62 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
-62 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
-62 error fstream_stack Object.oncomplete (fs.js:108:15)
-63 verbose exit [ 3, true ]
+4 warn package.json meadowlark@1.0.0 No repository field.
+5 warn package.json meadowlark@1.0.0 No README data
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'passport', null ]
+8 verbose cache add name=undefined spec="passport" args=["passport",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'passport',
+9 verbose parsed url   path: 'passport',
+9 verbose parsed url   href: 'passport' }
+10 verbose cache add [ 'pasport-facebook', null ]
+11 verbose cache add name=undefined spec="pasport-facebook" args=["pasport-facebook",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'pasport-facebook',
+12 verbose parsed url   path: 'pasport-facebook',
+12 verbose parsed url   href: 'pasport-facebook' }
+13 silly lockFile a3404013-passport passport
+14 verbose lock passport /Users/prbhadur/.npm/a3404013-passport.lock
+15 silly lockFile 6f97516a-pasport-facebook pasport-facebook
+16 verbose lock pasport-facebook /Users/prbhadur/.npm/6f97516a-pasport-facebook.lock
+17 silly lockFile a3404013-passport passport
+18 silly lockFile a3404013-passport passport
+19 silly lockFile 6f97516a-pasport-facebook pasport-facebook
+20 silly lockFile 6f97516a-pasport-facebook pasport-facebook
+21 verbose addNamed [ 'passport', '' ]
+22 verbose addNamed [ null, '*' ]
+23 silly lockFile d5a254c4-passport passport@
+24 verbose lock passport@ /Users/prbhadur/.npm/d5a254c4-passport.lock
+25 verbose addNamed [ 'pasport-facebook', '' ]
+26 verbose addNamed [ null, '*' ]
+27 silly lockFile e8db37bb-pasport-facebook pasport-facebook@
+28 verbose lock pasport-facebook@ /Users/prbhadur/.npm/e8db37bb-pasport-facebook.lock
+29 silly addNameRange { name: 'pasport-facebook', range: '*', hasData: false }
+30 silly addNameRange { name: 'passport', range: '*', hasData: false }
+31 verbose request where is /pasport-facebook
+32 verbose request registry https://registry.npmjs.org/
+33 verbose request id f14f5693e9415bd9
+34 verbose url raw /pasport-facebook
+35 verbose url resolving [ 'https://registry.npmjs.org/', './pasport-facebook' ]
+36 verbose url resolved https://registry.npmjs.org/pasport-facebook
+37 verbose request where is https://registry.npmjs.org/pasport-facebook
+38 info trying registry request attempt 1 at 10:19:13
+39 http GET https://registry.npmjs.org/pasport-facebook
+40 verbose request where is /passport
+41 verbose request registry https://registry.npmjs.org/
+42 verbose url raw /passport
+43 verbose url resolving [ 'https://registry.npmjs.org/', './passport' ]
+44 verbose url resolved https://registry.npmjs.org/passport
+45 verbose request where is https://registry.npmjs.org/passport
+46 info trying registry request attempt 1 at 10:19:13
+47 http GET https://registry.npmjs.org/passport
+48 http 404 https://registry.npmjs.org/pasport-facebook
+49 verbose headers { date: 'Tue, 28 Apr 2015 04:49:13 GMT',
+49 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+49 verbose headers   'content-type': 'application/json',
+49 verbose headers   'cache-control': 'max-age=0',
+49 verbose headers   'content-length': '51',
+49 verbose headers   'accept-ranges': 'bytes',
+49 verbose headers   via: '1.1 varnish',
+49 verbose headers   age: '0',
+49 verbose headers   'x-served-by': 'cache-fra1227-FRA',
+49 verbose headers   'x-cache': 'MISS',
+49 verbose headers   'x-cache-hits': '0',
+49 verbose headers   'x-timer': 'S1430196553.613691,VS0,VE180',
+49 verbose headers   'keep-alive': 'timeout=10, max=50',
+49 verbose headers   connection: 'Keep-Alive' }
+50 silly registry.get cb [ 404,
+50 silly registry.get   { date: 'Tue, 28 Apr 2015 04:49:13 GMT',
+50 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+50 silly registry.get     'content-type': 'application/json',
+50 silly registry.get     'cache-control': 'max-age=0',
+50 silly registry.get     'content-length': '51',
+50 silly registry.get     'accept-ranges': 'bytes',
+50 silly registry.get     via: '1.1 varnish',
+50 silly registry.get     age: '0',
+50 silly registry.get     'x-served-by': 'cache-fra1227-FRA',
+50 silly registry.get     'x-cache': 'MISS',
+50 silly registry.get     'x-cache-hits': '0',
+50 silly registry.get     'x-timer': 'S1430196553.613691,VS0,VE180',
+50 silly registry.get     'keep-alive': 'timeout=10, max=50',
+50 silly registry.get     connection: 'Keep-Alive' } ]
+51 silly lockFile e8db37bb-pasport-facebook pasport-facebook@
+52 silly lockFile e8db37bb-pasport-facebook pasport-facebook@
+53 http 200 https://registry.npmjs.org/passport
+54 silly registry.get cb [ 200,
+54 silly registry.get   { date: 'Tue, 28 Apr 2015 04:49:14 GMT',
+54 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+54 silly registry.get     etag: '"DH878WDX954KZ86F3BO0RGSDE"',
+54 silly registry.get     'content-type': 'application/json',
+54 silly registry.get     'cache-control': 'max-age=60',
+54 silly registry.get     'content-length': '34155',
+54 silly registry.get     'accept-ranges': 'bytes',
+54 silly registry.get     via: '1.1 varnish',
+54 silly registry.get     age: '0',
+54 silly registry.get     'x-served-by': 'cache-fra1244-FRA',
+54 silly registry.get     'x-cache': 'HIT',
+54 silly registry.get     'x-cache-hits': '1',
+54 silly registry.get     'x-timer': 'S1430196553.612888,VS0,VE429',
+54 silly registry.get     vary: 'Accept',
+54 silly registry.get     'keep-alive': 'timeout=10, max=50',
+54 silly registry.get     connection: 'Keep-Alive' } ]
+55 silly addNameRange number 2 { name: 'passport', range: '*', hasData: true }
+56 silly addNameRange versions [ 'passport',
+56 silly addNameRange   [ '0.1.0',
+56 silly addNameRange     '0.1.1',
+56 silly addNameRange     '0.1.2',
+56 silly addNameRange     '0.1.3',
+56 silly addNameRange     '0.1.4',
+56 silly addNameRange     '0.1.5',
+56 silly addNameRange     '0.1.6',
+56 silly addNameRange     '0.1.7',
+56 silly addNameRange     '0.1.8',
+56 silly addNameRange     '0.1.9',
+56 silly addNameRange     '0.1.10',
+56 silly addNameRange     '0.1.11',
+56 silly addNameRange     '0.1.12',
+56 silly addNameRange     '0.1.13',
+56 silly addNameRange     '0.1.14',
+56 silly addNameRange     '0.1.15',
+56 silly addNameRange     '0.1.16',
+56 silly addNameRange     '0.1.17',
+56 silly addNameRange     '0.1.18',
+56 silly addNameRange     '0.2.0',
+56 silly addNameRange     '0.2.1' ] ]
+57 verbose addNamed [ 'passport', '0.2.1' ]
+58 verbose addNamed [ '0.2.1', '0.2.1' ]
+59 silly lockFile b563cf22-passport-0-2-1 passport@0.2.1
+60 verbose lock passport@0.2.1 /Users/prbhadur/.npm/b563cf22-passport-0-2-1.lock
+61 silly lockFile 06aec021--org-passport-passport-0-2-1-tgz https://registry.npmjs.org/passport/-/passport-0.2.1.tgz
+62 verbose lock https://registry.npmjs.org/passport/-/passport-0.2.1.tgz /Users/prbhadur/.npm/06aec021--org-passport-passport-0-2-1-tgz.lock
+63 verbose addRemoteTarball [ 'https://registry.npmjs.org/passport/-/passport-0.2.1.tgz',
+63 verbose addRemoteTarball   'a7d34c07b30fb605be885edbc8c93e5142e38574' ]
+64 info retry fetch attempt 1 at 10:19:14
+65 verbose fetch to= /var/folders/d6/v3zmb5mn73j5kpbh1xbbygj40000gn/T/npm-36140-BoSK1tdu/registry.npmjs.org/passport/-/passport-0.2.1.tgz
+66 http GET https://registry.npmjs.org/passport/-/passport-0.2.1.tgz
+67 http 200 https://registry.npmjs.org/passport/-/passport-0.2.1.tgz
+68 silly lockFile 06aec021--org-passport-passport-0-2-1-tgz https://registry.npmjs.org/passport/-/passport-0.2.1.tgz
+69 silly lockFile 06aec021--org-passport-passport-0-2-1-tgz https://registry.npmjs.org/passport/-/passport-0.2.1.tgz
+70 silly lockFile b563cf22-passport-0-2-1 passport@0.2.1
+71 silly lockFile b563cf22-passport-0-2-1 passport@0.2.1
+72 silly lockFile d5a254c4-passport passport@
+73 silly lockFile d5a254c4-passport passport@
+74 error 404 404 Not Found: pasport-facebook
+74 error 404
+74 error 404 'pasport-facebook' is not in the npm registry.
+74 error 404 You should bug the author to publish it
+74 error 404 It was specified as a dependency of 'meadowlark'
+74 error 404
+74 error 404 Note that you can also install from a
+74 error 404 tarball, folder, or http url, or git url.
+75 error System Darwin 14.3.0
+76 error command "node" "/usr/local/bin/npm" "install" "--save" "passport" "pasport-facebook"
+77 error cwd /Users/prbhadur/Documents/Node&Express/meadowlark
+78 error node -v v0.10.36
+79 error npm -v 1.4.28
+80 error code E404
+81 verbose exit [ 1, true ]

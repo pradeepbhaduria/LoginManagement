@@ -18,7 +18,7 @@ module.exports = function (grunt) {
         cafemocha: {
 
             all: {
-                src: 'public/qa/tests-unit.js',
+                src: 'qa/tests-*.js',
                 options: {
                     ui: 'tdd'
                 }
