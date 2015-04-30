@@ -38,7 +38,18 @@ app.use(require('express-session')({
     resave: true
 }));
 
+//===========
 
+var auth = require('./lib/auth.js')(app, {
+    providers: credentials.authProviders,
+    successRedirect: '/about',
+    failureRedirect: '/unauthorized',
+});
+// auth.init() links in Passport middleware:
+auth.init();
+// now we can specify our auth routes:
+auth.registerRoutes();
+//==========
 
 app.use(express.static(__dirname + '/public'));
 var bodyParser = require('body-parser');
@@ -108,6 +119,14 @@ app.get('/epic-fail', function (req, res) {
         console.log("Throwing error");
         throw new Error('Kaboom!');
     });
+});
+
+app.get('/account', function (req, res) {
+    console.log("showing account", req.session.passport.user);
+    if (!req.session.passport.user){
+        return res.redirect(303, '/unauthorized');
+    }
+    res.render('account');
 });
 
 // api

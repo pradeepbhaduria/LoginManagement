@@ -21,8 +21,8 @@ var about = function (req, res) {
     //retrieving cookie 
     var monster = req.cookies.monster,
         signedMonster = req.signedCookies.signed_monster;
-    console.log("unsigned Cookie:" + monster);
-    console.log("signed cookie:" + signedMonster);
+   // console.log("unsigned Cookie:" + monster);
+   // console.log("signed cookie:" + signedMonster);
     res.render('about', {
         fortune: fortune.getFortune(),
         pageTestScript: '/qa/tests-about.js'
