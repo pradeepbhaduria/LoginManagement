@@ -1,6 +1,8 @@
 /*jslint nomen: true*/
 /*global console, require, process, __dirname, module, exports */
-var fortune = require('../lib/fortune.js');
+var fortune = require('../lib/fortune.js'),
+    credentials = require('../credentials.js'),
+    emailService = require('../lib/email.js')(credentials);
 
 var home = function (req, res) {
     'use strict';
@@ -21,8 +23,8 @@ var about = function (req, res) {
     //retrieving cookie 
     var monster = req.cookies.monster,
         signedMonster = req.signedCookies.signed_monster;
-   // console.log("unsigned Cookie:" + monster);
-   // console.log("signed cookie:" + signedMonster);
+    // console.log("unsigned Cookie:" + monster);
+    // console.log("signed cookie:" + signedMonster);
     res.render('about', {
         fortune: fortune.getFortune(),
         pageTestScript: '/qa/tests-about.js'
@@ -99,12 +101,12 @@ var newsletterProcessPost = function (req, res) {
             intro: 'Thank you!',
             message: 'You have now been signed up for the newsletter.'
         };
-        /*
+
         console.log("sending mail");
         var body = '<h1>Meadowlark Travel</h1>\n<p>Thanks for book your trip with ' +
             'Meadowlark Travel. <b>We look forward to your visit!</b>';
-        emailService.send('pradeep.bhaduria@yahoo.co.in', 'Meadowlark travel tour', 'Please find yout travel itenirary');
-        */
+        emailService.send('pradeep.bhaduria@yahoo.co.in', 'Meadowlark travel tour', body);
+
         return res.redirect(303, '/newsletter/archive');
     });
 };
